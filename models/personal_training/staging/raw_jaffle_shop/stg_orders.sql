@@ -12,7 +12,7 @@ with orders as (
         order_date,
         status
 
-    from raw_jaffle_shop.orders
+    from {{ source('jaffle_shop', 'orders') }}
 
 )
 
